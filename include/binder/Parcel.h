@@ -310,6 +310,7 @@ private:
         }
         virtual status_t unflatten(void const* buffer, size_t size, int const* fds, size_t count) {
             return const_cast<Flattenable<T>&>(val).unflatten(buffer, size, fds, count);
+        }
 #ifdef STE_HARDWARE
             return const_cast<Flattenable&>(val).unflatten(buffer, size, fds, count);
 #else
