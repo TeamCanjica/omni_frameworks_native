@@ -521,7 +521,7 @@ status_t GLConsumer::updateAndReleaseLocked(const BufferQueue::BufferItem& item)
     // Update the GLConsumer state.
     mCurrentTexture = buf;
 #ifdef STE_HARDWARE
-    mCurrentTexture = textureBuffer;
+    mCurrentTextureBuf = textureBuffer;
 #else
     mCurrentTextureBuf = mSlots[buf].mGraphicBuffer;
 #endif
